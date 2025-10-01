@@ -1,68 +1,52 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Mint Starter Kit",
+  "theme": "maple",
+  "name": "Loyal Documentation",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#0B7285",
+    "light": "#4FD6E9",
+    "dark": "#08566A"
   },
   "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Docs",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Start here",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
+              "Introduction/index",
+              "Introduction/vision",
+              "Introduction/roadmap",
+              "Introduction/usecases"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Architecture",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "architecture/network",
+              "architecture/privacy",
+              "architecture/payments"
             ]
           },
           {
-            "group": "Writing content",
+            "group": "ICO & Launch",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              "launch/MetaDAO",
+              "launch/Futarchy"
             ]
           },
           {
-            "group": "AI tools",
+            "group": "FAQ & Support",
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API reference",
-        "groups": [
-          {
-            "group": "API documentation",
-            "pages": [
-              "api-reference/introduction"
+              "faq/index"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "Resources",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "resources/links"
             ]
           }
         ]
@@ -71,19 +55,19 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "Lightpaper",
+          "href": "https://docs.askloyal.com/Loyal_lightpaper.pdf",
+          "icon": "scroll"
         },
         {
-          "anchor": "Community",
-          "href": "https://mintlify.com/community",
-          "icon": "slack"
+          "anchor": "MetaDAO Launch",
+          "href": "https://metadao.fi",
+          "icon": "rocket"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Contact",
+          "href": "mailto:main@askloyal.com",
+          "icon": "envelope"
         }
       ]
     }
@@ -95,33 +79,33 @@
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "Home",
+        "href": "https://askloyal.com/"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Read the Lightpaper",
+      "href": "https://docs.askloyal.com/Loyal_lightpaper.pdf"
     }
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://x.com/loyal_hq",
+      "github": "https://github.com/loyal-labs",
+      "discord": "https://discord.gg/HSeXaVhzWU"
     }
   }
 }
