@@ -1,10 +1,34 @@
 ---
-title: "Loyal Overview"
-description: "Get grounded in Loyal's privacy-preserving intelligence network and prepare for the MetaDAO ICO launch."
+title: "Introduction"
+description: "Building anti-surveillance and privacy preserving decentralized intelligence infrastructure"
 ---
+<Info>
+    Read our manifesto on our website · <a href="askloyal.com"> askloyal.com</a>
+</Info>
 
-## Introduction
+# Problem
 
-You are stepping into a network built to end surveillance-era AI. Centralized providers harvest your prompts, personal data, and decisions to feed their models. Loyal replaces that bargain with hardware-attested agents, encrypted micropayments, and a peer-to-peer marketplace where you stay in control of what you share.
+Your chats with LLMs have no legal protection. **Every single one of you** is exposed to these fundamental risks:
+- **Government surveillance**: In the last 10 years, Meta, Microsoft and Google alone [complied](https://surfshark.com/government-requests-for-user-data) 
+    with nearly 9M government queries. 35% of those were coming from the US agencies.
+- **Model training**: Meta [is already using](https://techcrunch.com/2025/10/01/meta-plans-to-sell-targeted-ads-based-on-data-in-your-ai-chats/) your chat data to target their ads.
+    xAI is [planning](https://techcrunch.com/2025/08/07/elon-musk-says-x-plans-to-introduce-ads-in-groks-responses/) to do the same. 
+    OpenAI [plans](https://techcrunch.com/2024/12/02/ads-might-be-coming-to-chatgpt-despite-sam-altman-not-being-a-fan/) the same.
+- **No control**: There is no privacy guarantees when the provider owns the runtime, the memory and the payment rails. 
+
+
+# Solution
+We must defend our own privacy if we expect to have any. Here's how we're going to do:
+- **Open and verifiable infra**: everything we build can be auidted by anyone.
+We use Intel TDX to create signed hash of code running on machines.
+If that hash matches the one from Github, it proves our oracles run the coe you saw in our repos.
+
+- **Smart contract streaming**: we use [MagicBlock](http://magicblock.xyz/) TEE rollups to handle queries and responses.
+Your data is verifiably only yours. 
+
+- **Confidential Compute**: we run Nvidia Hopper GPUs in CC mode. 
+They provide hardware signed attestation of the encryption and the model being run.
+
+
 
 

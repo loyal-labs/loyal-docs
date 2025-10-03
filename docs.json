@@ -7,17 +7,16 @@
     "light": "#4FD6E9",
     "dark": "#08566A"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/loyal_favicon.svg",
   "navigation": {
     "tabs": [
       {
         "tab": "Docs",
         "groups": [
           {
-            "group": "Start here",
+            "group": "Overview",
             "pages": [
-              "Introduction/index",
-              "Introduction/vision",
+              "index",
               "Introduction/roadmap",
               "Introduction/usecases"
             ]
@@ -55,6 +54,11 @@
     "global": {
       "anchors": [
         {
+          "anchor": "Home",
+          "href": "https://docs.askloyal.com",
+          "icon": "house"
+        },
+        {
           "anchor": "Lightpaper",
           "href": "https://docs.askloyal.com/Loyal_lightpaper.pdf",
           "icon": "scroll"
@@ -63,18 +67,13 @@
           "anchor": "MetaDAO Launch",
           "href": "https://metadao.fi",
           "icon": "rocket"
-        },
-        {
-          "anchor": "Contact",
-          "href": "mailto:main@askloyal.com",
-          "icon": "envelope"
-        }
+        } 
       ]
     }
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/light.png",
+    "dark": "/logo/dark.png"
   },
   "navbar": {
     "links": [
