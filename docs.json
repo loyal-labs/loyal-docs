@@ -75,14 +75,14 @@
   "navbar": {
     "links": [
       {
-        "label": "Home",
+        "label": "askloyal.com",
         "href": "https://askloyal.com/"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Read the Lightpaper",
-      "href": "https://docs.askloyal.com/Loyal_lightpaper.pdf"
+      "label": "Telegram community",
+      "href": "https://tg.askloyal.com"
     }
   },
   "contextual": {
