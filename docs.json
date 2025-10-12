@@ -8,6 +8,10 @@
     "dark": "#CD1D09"
   },
   "favicon": "/loyal_favicon.svg",
+  "banner": {
+    "content": "🚀 MetaDAO token sale starts October 18, 11:00 PM UTC! See our [token launch](/launch/token) for details. Follow our [Twitter](https://x.com/loyal_hq) for updates.",
+    "dismissible": false
+  },
   "navigation": {
     "tabs": [
       {
