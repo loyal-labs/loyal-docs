@@ -1,11 +1,11 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "maple",
+  "theme": "mint",
   "name": "Loyal Documentation",
   "colors": {
-    "primary": "#0B7285",
-    "light": "#4FD6E9",
-    "dark": "#08566A"
+    "primary": "#CD1D09",
+    "light": "#CD1D09",
+    "dark": "#CD1D09"
   },
   "favicon": "/loyal_favicon.svg",
   "navigation": {
@@ -14,26 +14,19 @@
         "tab": "Docs",
         "groups": [
           {
-            "group": "Overview",
+            "group": "Mission",
             "pages": [
               "index",
-              "Introduction/roadmap",
+              "Introduction/solution",
+              "Introduction/howitworks",
               "Introduction/usecases"
             ]
           },
           {
-            "group": "Architecture",
+            "group": "Token & Launch",
             "pages": [
-              "architecture/network",
-              "architecture/privacy",
-              "architecture/payments"
-            ]
-          },
-          {
-            "group": "ICO & Launch",
-            "pages": [
-              "launch/MetaDAO",
-              "launch/Futarchy"
+              "launch/token",
+              "launch/roadmap"
             ]
           },
           {

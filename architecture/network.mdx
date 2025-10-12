@@ -17,6 +17,67 @@ description: "Explore how Loyal’s client and service agents interact across th
   </Card>
 </Columns>
 
+
+```mermaid
+%%{init: {
+  "theme": "dark",
+  "flowchart": { "rankSpacing": 90, "nodeSpacing": 70, "padding": 20, "htmlLabels": true },
+  "themeVariables": { "fontSize": "20px" }
+}}%%
+flowchart TB
+
+%% =======================
+%% Sections
+%% =======================
+
+subgraph FE[Frontend]
+  U[User + Wallet]
+  F[Frontend dApp]
+  PDA[(PDA: chat state and history)]
+  ESC[(Deposit Escrow)]
+  MBV[MagicBlock Validator]
+end
+
+subgraph SC[Solana Smart Contracts on MagicBlock TEE]
+  APP[App Contract]
+  ORC[Oracle Contract]
+  POLICY[Privacy: read access = user and oracle]
+end
+
+subgraph BE[Backend / TEE]
+  LLM[Private Compute GPU / LLM]
+end
+
+%% =======================
+%% Frontend behaviors
+%% =======================
+U -->|Connect wallet| F
+F -->|Load prior chats on connect| PDA
+F -->|Verify TEE attestation| MBV
+F -->|Pay per request| ESC
+
+%% =======================
+%% Request / execution path
+%% =======================
+F -->|Submit question| APP
+APP -->|CPI: notify query in chat| ORC
+ORC -->|Verify and authorize| MBV
+ORC -->|Execute| LLM
+LLM -->|Stream tokens / bytes| ORC
+ORC -->|Stream to PDA| PDA
+
+%% =======================
+%% Streaming + settlement
+%% =======================
+PDA -->|Updates stream| F
+F -->|Render partial responses| U
+APP -->|Deduct per token| ESC
+
+%% Notes
+POLICY -. applies .-> APP
+F -. monitors .-> PDA
+```
+
 ## Request Lifecycle
 
 <Steps>
