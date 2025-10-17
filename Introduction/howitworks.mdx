@@ -5,21 +5,10 @@ mode: "wide"
 
 <Tabs>
   <Tab title="Frontend">
-    ```mermaid
-    sequenceDiagram
-        participant Client
-        participant Wallet
-        participant MagicBlockRPC as MagicBlock RPC
-        participant SolanaConn as Solana Connection
+    <Frame caption="Loyal frontend">
+      <img src="/images/schema1.png" alt="Sequence flow of the Loyal frontend" />
+    </Frame>
 
-        Client->>MagicBlockRPC: verifyTeeRpcIntegrity(challenge)
-        MagicBlockRPC-->>Client: TDX quote
-        Client->>Wallet: signMessage(challenge)
-        Wallet-->>Client: signature
-        Client->>MagicBlockRPC: getAuthToken(publicKey, signature)
-        MagicBlockRPC-->>Client: auth token
-        Client->>SolanaConn: connect ?token=authToken
-    ```
 
     The Loyal client is just one option for interacting with the network, and it follows MagicBlock’s Private Ephemeral Rollup flow end-to-end before it will send a request. The sequence is:
 
@@ -45,22 +34,10 @@ mode: "wide"
   </Tab>
 
   <Tab title="Program">
-    ```mermaid
-    sequenceDiagram
-        participant User
-        participant PDA
-        participant PER as MagicBlock PER
-        participant Oracle
-        participant Frontend
+    <Frame caption="Loyal program">
+      <img src="/images/schema2.png" alt="Sequence flow of the Loyal program" />
+    </Frame>
 
-        User->>PDA: create PDA + deposit funds\n(set permissions)
-        PDA->>PER: delegate access token scope
-        User->>PDA: send encrypted request
-        PDA->>Oracle: CPI signal to oracle program
-        Oracle-->>PDA: process query + stream response chunks
-        PDA-->>Frontend: emit history updates
-        Frontend-->>User: render streaming response
-    ```
 
     The PDA-backed program coordinates requests, payments, permissioning, and routing. We compose MagicBlock’s Permission Program to manage encrypted state: PDAs group conversations, wallets, and application accounts under fine-grained access rules that live on Solana L1 and can be updated atomically.
 
@@ -72,35 +49,9 @@ mode: "wide"
   </Tab>
 
   <Tab title="Oracles">
-    ```mermaid
-    flowchart TB
-        subgraph HostCPU["Host CPU (Phala & Nillion)"]
-            direction TB
-            HostBase["Host OS / Hypervisor"]
-            subgraph CPUTEE["CPU TEE (Confidential VM)"]
-                direction TB
-                GuestOS["Guest OS + runtime"]
-                GPUDriver["GPU driver"]
-                OracleRuntime["Loyal oracle runtime"]
-            end
-        end
-
-        subgraph GPU["GPU"]
-            direction TB
-            GPUMgmt["GPU management firmware"]
-            subgraph GPUTEE["GPU TEE (H100/H200)"]
-                direction TB
-                ComputeEngines["Compute engines"]
-                HBM["Encrypted high-bandwidth memory"]
-            end
-        end
-
-        OracleRuntime -->|Secure channel| ComputeEngines
-        ComputeEngines -->|Encrypted results| OracleRuntime
-        HostBase -->|Admin channel| GPUMgmt
-        GPUMgmt -->|Provision & attest| ComputeEngines
-        ComputeEngines -->|Integrity reports| GuestOS
-    ```
+    <Frame caption="Confidential oracles">
+      <img src="/images/schema3.png" alt="Architecture of the Loyal confidential oracles" />
+    </Frame>
 
     Confidential oracles we run on Phala and Nillion execute the heavy lifting. A CPU TEE hosts the oracle runtime and GPU driver, establishes an encrypted channel to a GPU TEE, and keeps the host OS outside the trust boundary. GPU management firmware cannot see prompts or weights; it only provisions the enclave, which returns attestation reports before accepting work. Even streamed LLM responses stay encrypted as they traverse the PCIe link between enclaves and back to the PDA.
 
