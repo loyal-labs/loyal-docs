@@ -98,7 +98,7 @@ import {
   findVaultPda,
   PROGRAM_ID,
   LAMPORTS_PER_SOL,
-} from "@loyal/transactions";
+} from "@loyal-labs/transactions";
 
 // Convert SOL to lamports
 const lamports = solToLamports(1.5); // 1_500_000_000
@@ -114,7 +114,7 @@ const [vaultPda] = findVaultPda();
 ### Constants
 
 ```typescript
-import { PROGRAM_ID, DEPOSIT_SEED, VAULT_SEED, LAMPORTS_PER_SOL } from "@loyal/transactions";
+import { PROGRAM_ID, DEPOSIT_SEED, VAULT_SEED, LAMPORTS_PER_SOL } from "@loyal-labs/transactions";
 
 // Program ID: 4ewpzEPF5xrVAHeRkoe7XS1yKFGQBekD7PgFwEz9SaxY
 console.log(PROGRAM_ID.toBase58());
@@ -123,7 +123,7 @@ console.log(PROGRAM_ID.toBase58());
 ### Type Guards
 
 ```typescript
-import { isKeypair, isAnchorProvider, isWalletLike } from "@loyal/transactions";
+import { isKeypair, isAnchorProvider, isWalletLike } from "@loyal-labs/transactions";
 
 if (isKeypair(signer)) {
   console.log("Using Keypair");

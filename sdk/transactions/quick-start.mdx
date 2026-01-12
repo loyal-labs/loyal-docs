@@ -8,9 +8,9 @@ SDK for Telegram-based Solana deposits. Deposit SOL for any Telegram username, w
 ## Installation
 
 ```bash
-bun add @loyal/transactions
+bun add @loyal-labs/transactions
 # or
-npm install @loyal/transactions
+npm install @loyal-labs/transactions
 ```
 
 ### Peer Dependencies
@@ -25,7 +25,7 @@ bun add @coral-xyz/anchor @solana/web3.js
 
 ```typescript
 import { Connection } from "@solana/web3.js";
-import { LoyalTransactionsClient, solToLamports } from "@loyal/transactions";
+import { LoyalTransactionsClient, solToLamports } from "@loyal-labs/transactions";
 
 const connection = new Connection("https://api.devnet.solana.com");
 const client = LoyalTransactionsClient.fromKeypair(connection, myKeypair);

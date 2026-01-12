@@ -11,7 +11,7 @@ For React applications using `@solana/wallet-adapter-react`:
 
 ```typescript
 import { useConnection, useWallet } from "@solana/wallet-adapter-react";
-import { LoyalTransactionsClient, solToLamports } from "@loyal/transactions";
+import { LoyalTransactionsClient, solToLamports } from "@loyal-labs/transactions";
 
 function DepositButton() {
   const { connection } = useConnection();
@@ -40,7 +40,7 @@ For backend scripts, bots, or CLI tools:
 
 ```typescript
 import { Connection, Keypair } from "@solana/web3.js";
-import { LoyalTransactionsClient, solToLamports } from "@loyal/transactions";
+import { LoyalTransactionsClient, solToLamports } from "@loyal-labs/transactions";
 
 const connection = new Connection("https://api.devnet.solana.com");
 const keypair = Keypair.fromSecretKey(mySecretKey);
@@ -59,7 +59,7 @@ If you're already using Anchor with a configured provider:
 
 ```typescript
 import { AnchorProvider } from "@coral-xyz/anchor";
-import { LoyalTransactionsClient } from "@loyal/transactions";
+import { LoyalTransactionsClient } from "@loyal-labs/transactions";
 
 const provider = AnchorProvider.env();
 const client = LoyalTransactionsClient.fromProvider(provider);
