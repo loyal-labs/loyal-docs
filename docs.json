@@ -18,6 +18,15 @@
         "tab": "Docs",
         "groups": [
           {
+            "group": "Telegram Transactions SDK",
+            "pages": [
+              "sdk/transactions/quick-start",
+              "sdk/transactions/usage",
+              "sdk/transactions/reference",
+              "sdk/transactions/errors"
+            ]
+          },
+          {
             "group": "Mission",
             "pages": [
               "index",
