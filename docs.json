@@ -18,15 +18,6 @@
         "tab": "Docs",
         "groups": [
           {
-            "group": "Telegram Transactions SDK",
-            "pages": [
-              "sdk/transactions/quick-start",
-              "sdk/transactions/usage",
-              "sdk/transactions/reference",
-              "sdk/transactions/errors"
-            ]
-          },
-          {
             "group": "Mission",
             "pages": [
               "index",
@@ -37,10 +28,12 @@
             ]
           },
           {
-            "group": "Token & Launch",
+            "group": "Telegram Transactions SDK",
             "pages": [
-              "launch/token",
-              "launch/roadmap"
+              "sdk/transactions/quick-start",
+              "sdk/transactions/usage",
+              "sdk/transactions/reference",
+              "sdk/transactions/errors"
             ]
           },
           {
@@ -52,7 +45,9 @@
           {
             "group": "Resources",
             "pages": [
-              "resources/links"
+              "resources/links",
+              "launch/roadmap",
+              "launch/token"
             ]
           }
         ]
