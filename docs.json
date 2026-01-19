@@ -49,6 +49,12 @@
               "launch/roadmap",
               "launch/token"
             ]
+          },
+          {
+            "group": "Transparency",
+            "pages": [
+              "transparency/q4-2025"
+            ]
           }
         ]
       }
