@@ -22,7 +22,7 @@ The main SDK class for interacting with the Telegram Transfer program.
 
 Deposit SOL for a Telegram username.
 
-````typescript
+```typescript
 interface DepositParams {
   username: string;           // Telegram username (5-32 chars, without @)
   amountLamports: number | bigint;  // Amount in lamports
@@ -33,6 +33,7 @@ interface DepositResult {
   signature: string;          // Transaction signature
   deposit: DepositData;       // Updated deposit account data
 }
+```
 
 ##### `refund(params): Promise<RefundResult>`
 
@@ -49,7 +50,7 @@ interface RefundResult {
   signature: string;          // Transaction signature
   deposit: DepositData;       // Updated deposit account data
 }
-````
+```
 
 Example:
 
@@ -63,8 +64,6 @@ console.log("Refunded:", result.signature);
 console.log("Remaining balance:", result.deposit.amount);
 ```
 
-````
-
 ##### `getDeposit(depositor, username): Promise<DepositData | null>`
 
 Fetch deposit data for a specific depositor and username.
@@ -75,7 +74,7 @@ if (deposit) {
   console.log("Amount:", deposit.amount);
   console.log("Address:", deposit.address.toBase58());
 }
-````
+```
 
 ##### `findDepositPda(depositor, username): [PublicKey, number]`
 
