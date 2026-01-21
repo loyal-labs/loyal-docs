@@ -15,18 +15,49 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Docs",
+        "tab": "Learn",
         "groups": [
           {
-            "group": "Mission",
+            "group": "About Loyal",
             "pages": [
               "index",
               "Introduction/solution",
               "Introduction/howitworks",
-              "Introduction/usecases",
+              "Introduction/usecases"
+            ]
+          },
+          {
+            "group": "Architecture",
+            "pages": [
+              "architecture/network",
+              "architecture/payments",
+              "architecture/privacy"
+            ]
+          },
+          {
+            "group": "Launch",
+            "pages": [
+              "launch/roadmap",
+              "launch/token"
+            ]
+          },
+          {
+            "group": "Team",
+            "pages": [
               "Introduction/team"
             ]
           },
+          {
+            "group": "Transparency",
+            "pages": [
+              "transparency/q4-2025"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Developers",
+        "groups": [
           {
             "group": "Telegram Transactions SDK",
             "pages": [
@@ -45,15 +76,7 @@
           {
             "group": "Resources",
             "pages": [
-              "resources/links",
-              "launch/roadmap",
-              "launch/token"
-            ]
-          },
-          {
-            "group": "Transparency",
-            "pages": [
-              "transparency/q4-2025"
+              "resources/links"
             ]
           }
         ]
@@ -101,7 +124,6 @@
       "copy",
       "view",
       "chatgpt",
-      "claude",
       "perplexity",
       "mcp",
       "cursor",
