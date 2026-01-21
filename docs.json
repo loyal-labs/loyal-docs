@@ -15,6 +15,32 @@
   "navigation": {
     "tabs": [
       {
+        "tab": "Developers",
+        "groups": [
+          {
+            "group": "Telegram Transactions SDK",
+            "pages": [
+              "sdk/transactions/quick-start",
+              "sdk/transactions/usage",
+              "sdk/transactions/reference",
+              "sdk/transactions/errors"
+            ]
+          },
+          {
+            "group": "FAQ & Support",
+            "pages": [
+              "faq/index"
+            ]
+          },
+          {
+            "group": "Resources",
+            "pages": [
+              "resources/links"
+            ]
+          }
+        ]
+      },
+      {
         "tab": "Learn",
         "groups": [
           {
@@ -40,7 +66,12 @@
               "launch/roadmap",
               "launch/token"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "tab": "Transparency",
+        "groups": [
           {
             "group": "Team",
             "pages": [
@@ -48,35 +79,9 @@
             ]
           },
           {
-            "group": "Transparency",
+            "group": "Reports",
             "pages": [
               "transparency/q4-2025"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Developers",
-        "groups": [
-          {
-            "group": "Telegram Transactions SDK",
-            "pages": [
-              "sdk/transactions/quick-start",
-              "sdk/transactions/usage",
-              "sdk/transactions/reference",
-              "sdk/transactions/errors"
-            ]
-          },
-          {
-            "group": "FAQ & Support",
-            "pages": [
-              "faq/index"
-            ]
-          },
-          {
-            "group": "Resources",
-            "pages": [
-              "resources/links"
             ]
           }
         ]
